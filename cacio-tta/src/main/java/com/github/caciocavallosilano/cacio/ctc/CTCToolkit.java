@@ -24,16 +24,7 @@
  */
 package com.github.caciocavallosilano.cacio.ctc;
 
-import java.awt.AWTException;
-import java.awt.Desktop;
-import java.awt.Frame;
-import java.awt.GraphicsDevice;
-import java.awt.HeadlessException;
-import java.awt.PrintJob;
-import java.awt.Robot;
-import java.awt.SystemTray;
-import java.awt.TrayIcon;
-import java.awt.Window;
+import java.awt.*;
 import java.awt.dnd.DragGestureEvent;
 import java.awt.dnd.InvalidDnDOperationException;
 import java.awt.dnd.peer.DragSourceContextPeer;
@@ -196,6 +187,28 @@ public class CTCToolkit extends CacioToolkit {
 
     @Override
     public boolean isTaskbarSupported() {
+        return true;
+    }
+
+    @Override
+    public boolean isWindowOpacitySupported() {
+        return true;
+    }
+
+    // Shaping
+    @Override
+    public boolean isWindowShapingSupported() {
+        return true;
+    }
+
+    // Per-pixel alpha
+    @Override
+    public boolean isWindowTranslucencySupported() {
+        return true;
+    }
+
+    @Override
+    public boolean isTranslucencyCapable(GraphicsConfiguration gc) {
         return true;
     }
 }
