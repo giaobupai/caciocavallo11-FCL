@@ -25,7 +25,7 @@
  * questions.
  */
 
-package com.github.caciocavallosilano.cacio.ctc;
+package net.java.openjdk.cacio.ctc;
 
 import java.awt.GraphicsEnvironment;
 import java.io.BufferedReader;
